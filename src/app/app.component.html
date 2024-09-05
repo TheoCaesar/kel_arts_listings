@@ -22,7 +22,7 @@
           <p>Browse our collection to find the masterpiece that you desire or</p>
           <p> Join us today to start selling.</p>
           <div class="actions">
-            <button class="btn-fill">explore artwords</button>
+            <button class="btn-fill">explore artworks</button>
             <button>start selling</button>
           </div>
         </div>      
@@ -42,53 +42,66 @@
 <section class="arts">
   <div class="artworks">
     <div class="heading">
-      <p>featured artworks</p>
+      <h2>featured artworks</h2>
       <button class="btn-light">view all</button>
     </div>
-    <div class="content">
-      <div class="art-piece">
-        <img src="" alt="art-piece">
-        <div class="art-info">
-          <p>2 pieces frame</p>
-          <p>artist name</p>
-        </div>
-      </div>
-    </div>
+      <div class="content" > 
+        @for (img of imgs; track img.id) {
+        <div class="art-piece">
+          <div class="portrait">
+            <img [src]="img.path" alt="art-piece">
+          </div>
+          <div class="art-info">
+            <p>2 pieces frame</p>
+            <p>artist name</p>
+          </div>
+        </div>     
+      }
+
+      </div> 
   </div>
   <div class="artists">
     <div class="heading">
-      <p>top artists</p>
+      <h2>top artists</h2>
       <button class="btn-light">view all</button>
     </div>
     <div class="content">
-      <div class="art-piece">
-        <img src="" alt="artist pohoto">
-        <div class="artist-info">
-          <p>artist name</p>
+      @for (artist of artists; track artist.id) {
+        <div class="artist-piece">
+          <div class="portrait">
+            <img [src]="artist.imgUrl"  alt="artist pohoto">
+          </div>
+          <div class="artist-info">
+            <p>{{artist.name}}</p>
+          </div>
         </div>
-      </div>
+      }
+      
     </div>
   </div>
 </section>
 <section class="categories">
-  <div class="heading">
-    <p>Categories</p>
-    <button class="btn-light">view all</button>
-  </div>
-  <div class="trio-block">
-    <div class="left">
-      <div class="top"></div>
-      <div class="bottom"></div>
+  <div class="content">
+    <div class="heading">
+      <h2>Categories</h2>
+      <button class="btn-light">view all</button>
     </div>
-    <div class="right"></div>
-  </div>
-  <div class="trio-block">
-    <div class="left"></div>
-    <div class="right">
-      <div class="top"></div>
-      <div class="bottom"></div>
+    <div class="trio-block">
+      <div class="left">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+      <div class="right"></div>
     </div>
+    <div class="trio-block">
+      <div class="left"></div>
+      <div class="right">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>    
   </div>
+
 </section>
 <footer>
 
