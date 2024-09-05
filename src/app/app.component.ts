@@ -1,15 +1,54 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NgFor],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'kel_arts_listings';
+
+  categories = [
+    [
+      {
+        id:1,
+        name: "Paint",
+        imgUrl: "./../assets/categories/paint.png"
+      },
+      {
+        id:2,
+        name: "Mural",
+        imgUrl: "./../assets/categories/mural.png"
+      },
+      {
+        id:3,
+        name: "Oil",
+        imgUrl: "./../assets/categories/oil.png"
+      }
+    ],
+    [
+      {
+        id:1,
+        name: "Paint",
+        imgUrl: "./../assets/categories/paint.png"
+      },
+      {
+        id:2,
+        name: "Landscape",
+        imgUrl: "./../assets/categories/landscape.png"
+      },
+      {
+        id:3,
+        name: "Nature",
+        imgUrl: "./../assets/artworks/nature.png"
+      },
+    ]
+  ]
+
   imgs = [
     {
       id: 0,

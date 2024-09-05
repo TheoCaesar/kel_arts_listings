@@ -187,3 +187,23 @@ section.arts, section.categories {
     overflow: hidden;
     margin-bottom: 15px;
 }
+
+.categories {
+    border: 2px solid red;
+}
+
+.trio-block {
+    border: 2px solid blue;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.trio-block .left, .trio-block .right{
+    width: 49%;
+    border: 2px solid greenyellow;
+}
+
+.trio-block:nth-child(1) .right {
+    width:  80px;
+    border:  5px solid red;
+}
