@@ -86,26 +86,25 @@
       <h2>Categories</h2>
       <button class="btn-light">view all</button>
     </div>
-    <div class="trio-block">
-      <div class="left">
+
+    <div class="trio-block" *ngFor="let trioBlock of categories; let i= index">
+      <div class="dual">
         <div class="top">
-          <img src="../assets/categories/abstract.png" width="620px">
+          <!-- <img src="../assets/categories/abstract.png" width="620px"> -->
+          <img [src]="trioBlock[0].imgUrl" width="620px">
+          <p class="category-name paint">{{trioBlock[0].name}}</p>
         </div>
         <div class="bottom">
-          <img src="../assets/categories/abstract.png" width="620px">
+          <img [src]="trioBlock[2].imgUrl" width="620px">
+          <p class="category-name">{{trioBlock[2].name}}</p>
         </div>
       </div>
-      <div class="right">
-        <img src="../assets/categories/mural.png" width="620px">
+      <div class="single">
+        <!-- <img src="../assets/categories/mural.png" width="620px"> -->
+        <img [src]="trioBlock[1].imgUrl" width="620px">      
+        <p class="category-name"><span>{{trioBlock[1].name}}</span></p>
       </div>
     </div>
-    <div class="trio-block">
-      <div class="left"></div>
-      <div class="right">
-        <div class="top"></div>
-        <div class="bottom"></div>
-      </div>
-    </div>    
   </div>
 </section>
 <footer>

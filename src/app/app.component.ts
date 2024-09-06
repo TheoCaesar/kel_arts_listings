@@ -16,8 +16,8 @@ export class AppComponent {
     [
       {
         id:1,
-        name: "Paint",
-        imgUrl: "./../assets/categories/paint.png"
+        name: "Abstract",
+        imgUrl: "./../assets/categories/abstract.png"
       },
       {
         id:2,
@@ -32,19 +32,20 @@ export class AppComponent {
     ],
     [
       {
-        id:1,
-        name: "Paint",
-        imgUrl: "./../assets/categories/paint.png"
-      },
-      {
         id:2,
         name: "Landscape",
         imgUrl: "./../assets/categories/landscape.png"
       },
       {
+        id:1,
+        name: "Paint",
+        imgUrl: "./../assets/categories/paint.png"
+      },
+      
+      {
         id:3,
         name: "Nature",
-        imgUrl: "./../assets/artworks/nature.png"
+        imgUrl: "./../assets/categories/nature.png"
       },
     ]
   ]
